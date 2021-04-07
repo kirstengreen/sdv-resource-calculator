@@ -1,10 +1,15 @@
 <template>
-  <Header />
-  <router-view/>
-  <!-- <Footer /> -->
+  <div>
+    <Header />
+    <router-view />
+    <!-- <Footer /> -->
+  </div>
 </template>
 
+
+
 <script>
+
 import Header from './components/Header' 
 
 export default {
@@ -19,6 +24,7 @@ export default {
 
 <style>
 
+@import '~normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 /* * {
