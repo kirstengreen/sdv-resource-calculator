@@ -50,6 +50,7 @@ body {
 
 .main-content {
   width: 80%;
+  max-width: 1200px;
   margin: 0 auto;
   min-height: calc(100vh - 112px);
 }
@@ -60,6 +61,10 @@ body {
 
 .content-footer {
   margin: 32 auto 48px;
+}
+
+hr {
+  color: rgb( 238, 238, 238 );
 }
 
 </style>

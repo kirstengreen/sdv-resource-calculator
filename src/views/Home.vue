@@ -1,6 +1,9 @@
 <template>
   <div class="main-content">
-    <h1>Homepage</h1>
+    <div class="content-header">
+      <h1>Homepage</h1>
+    </div>
+    <div class="content-footer"></div>
   </div>
 </template>
 

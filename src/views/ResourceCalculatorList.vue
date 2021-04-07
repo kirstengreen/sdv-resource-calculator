@@ -7,9 +7,7 @@
     <!-- <CraftingItemFilters /> -->
     <hr>
     <!-- <CraftingItemList /> -->
-    <div class="content-footer">
-      
-    </div>
+    <div class="content-footer"></div>
   </div>
 </template>
 
