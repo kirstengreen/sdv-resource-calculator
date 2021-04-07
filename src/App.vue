@@ -54,4 +54,12 @@ body {
   min-height: calc(100vh - 112px);
 }
 
+.content-header {
+  margin: 48px auto 32px; 
+}
+
+.content-footer {
+  margin: 32 auto 48px;
+}
+
 </style>

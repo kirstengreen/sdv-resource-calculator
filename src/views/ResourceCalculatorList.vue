@@ -1,6 +1,15 @@
 <template>
   <div class="main-content">
-    <h1>This is the resource calculator</h1>
+    <div class="content-header">
+      <h1>Resource Calculator</h1>
+    </div>
+    <!-- <CraftingItemSearch /> -->
+    <!-- <CraftingItemFilters /> -->
+    <hr>
+    <!-- <CraftingItemList /> -->
+    <div class="content-footer">
+      
+    </div>
   </div>
 </template>
 

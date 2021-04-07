@@ -1,7 +1,7 @@
 <template>
   <header>
-    <div class="header">
-      <router-link to="/">Stardew Valley Resource Tool</router-link>
+    <div class="header-content">
+      <router-link to="/"><h3>Stardew Valley Resource Tool</h3></router-link>
       <nav>
         <ul>
           <li><router-link to="/">Home</router-link></li>
@@ -18,6 +18,8 @@
 <style scoped>
 
 header {
+  display: flex;
+  align-items: center;
   position: sticky; 
   top: 0;
   height: 56px;
@@ -25,7 +27,7 @@ header {
   color: rgb( 255, 255, 255 );
 }
 
-.header {
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;

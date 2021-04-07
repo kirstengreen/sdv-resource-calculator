@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="footer">
+    <div class="footer-content">
       <a href="https://github.com/kirstengreen/sdv-resource-calculator">GitHub</a>
     </div>
   </footer>
@@ -19,7 +19,7 @@ footer {
   color: rgb( 255, 255, 255 )
 }
 
-.footer {
+.footer-content {
   width: 80%;
   margin: 0 auto;
 }
