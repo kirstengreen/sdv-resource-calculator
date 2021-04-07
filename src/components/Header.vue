@@ -1,7 +1,7 @@
 <template>
   <header>
-    <div class='main-content header'>
-      <router-link to="/"><h3>Stardew Valley Resource Tool</h3></router-link>
+    <div class="header">
+      <router-link to="/">Stardew Valley Resource Tool</router-link>
       <nav>
         <ul>
           <li><router-link to="/">Home</router-link></li>
@@ -20,16 +20,17 @@
 header {
   position: sticky; 
   top: 0;
-  margin: 0;
-  padding: 4px 0;
+  height: 56px;
   background-color: rgb( 53, 69, 99 );
-  color: rgb( 255, 255, 255 )
+  color: rgb( 255, 255, 255 );
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 nav {

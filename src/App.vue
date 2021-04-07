@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="page">
     <Header />
     <router-view />
-    <!-- <Footer /> -->
+    <Footer />
   </div>
 </template>
 
@@ -11,11 +11,13 @@
 <script>
 
 import Header from './components/Header' 
+import Footer from './components/Footer' 
 
 export default {
   name: 'App',
   components: {
     Header,
+    Footer
   },
 }
 
@@ -35,16 +37,21 @@ export default {
 /* Global styles */
 
 body {
-  display: flex;
-  flex-direction: column;
   background-color: rgb( 242, 242, 242 );
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .main-content {
   width: 80%;
   margin: 0 auto;
+  min-height: calc(100vh - 112px);
 }
 
 </style>
