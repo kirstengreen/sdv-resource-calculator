@@ -12,6 +12,7 @@
 .category-selection-content {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin: 24px 0;
 }
 

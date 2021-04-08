@@ -71,10 +71,12 @@ hr {
 /* FORM STYLES */
 
 input {
-  height: 40px;
+  height: 36px;
+  margin: 0;
   padding: 0 16px;
   font-size: 16px;
   border: 2px solid rgb( 51, 51, 51 );
+  border-radius: 4px;
 }
 
 
@@ -82,8 +84,11 @@ input {
 
 .btn {
   height: 40px;
-  padding: 8px 16px;
+  margin: 0;
+  padding: 0 16px;
   border: 2px solid rgb( 51, 51, 51 );
+  border-radius: 4px;
+  font-size: 16px;
   font-weight: 700;
 }
 
