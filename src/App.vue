@@ -86,10 +86,16 @@ input {
   height: 40px;
   margin: 0;
   padding: 0 16px;
+  background: rgb( 51, 51, 51 );
   border: 2px solid rgb( 51, 51, 51 );
   border-radius: 4px;
   font-size: 16px;
   font-weight: 700;
+  color: rgb( 255, 255, 255 )
+}
+
+.btn:hover {
+  opacity: .8;
 }
 
 </style>

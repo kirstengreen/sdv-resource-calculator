@@ -19,9 +19,14 @@
 .category-btn {
   height: 40px;
   padding: 0 16px;
-  border: 2px solid rgb( 51, 51, 51);
+  background: rgb( 204, 204, 204 );
+  border: 0;
   border-radius: 20px;
   font-weight: 700;
+}
+
+.category-btn:hover {
+  opacity: .8;
 }
 
 .category-btn:not(:last-child) {
