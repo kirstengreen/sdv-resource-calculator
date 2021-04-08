@@ -4,7 +4,7 @@
       <h1>Resource Calculator</h1>
     </div>
     <CraftingItemSearch />
-    <!-- <CraftingItemFilters /> -->
+    <CraftingItemFilters />
     <hr>
     <!-- <CraftingItemList /> -->
     <div class="content-footer"></div>
@@ -14,12 +14,14 @@
 
 <script>
 
-import CraftingItemSearch from '../components/CraftingItemSearch' 
+import CraftingItemSearch from '../components/CraftingItemSearch'
+import CraftingItemFilters from '../components/CraftingItemFilters' 
 
 export default {
   name: 'Resource Calculator',
   components: {
-    CraftingItemSearch
+    CraftingItemSearch,
+    CraftingItemFilters
   },
 }
 
