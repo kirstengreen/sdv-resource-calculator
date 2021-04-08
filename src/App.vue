@@ -67,4 +67,24 @@ hr {
   color: rgb( 238, 238, 238 );
 }
 
+
+/* FORM STYLES */
+
+input {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 16px;
+  border: 1px solid rgb( 51, 51, 51 );
+}
+
+
+/* BUTTON STYLES */
+
+button {
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid rgb( 51, 51, 51 );
+  font-weight: 700;
+}
+
 </style>
