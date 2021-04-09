@@ -5,7 +5,9 @@
     </div>
     <CraftingItemSearch />
     <hr>
-    <CraftingItemList />
+    <CraftingItemList 
+      :craftableItems="craftableItems" 
+    />
     <div class="content-footer"></div>
   </div>
 </template>
@@ -17,8 +19,8 @@ import CraftingItemSearch from '../components/CraftingItemSearch'
 import CraftingItemList from '../components/CraftingItemList'
 
 export default {
-
   name: 'Resource Calculator',
+  
   components: {
     CraftingItemSearch,
     CraftingItemList
@@ -38,7 +40,8 @@ export default {
     async fetchCraftableItems() {
       const res = await fetch('http://localhost:5000/api/v1/craftable-items/')
       const data = await res.json()
-      return data.data
+      console.log(data.data)
+      this.craftableItems = data.data
     }
   },
   
