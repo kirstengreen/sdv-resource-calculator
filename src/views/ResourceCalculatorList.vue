@@ -19,7 +19,6 @@ import CraftingItemSearch from '../components/CraftingItemSearch'
 import CraftingItemList from '../components/CraftingItemList'
 
 export default {
-  name: 'Resource Calculator',
   
   components: {
     CraftingItemSearch,
@@ -38,10 +37,10 @@ export default {
 
   methods: {
     async fetchCraftableItems() {
-      const res = await fetch('http://localhost:5000/api/v1/craftable-items/')
-      const data = await res.json()
-      console.log(data.data)
-      this.craftableItems = data.data
+      fetch('http://localhost:5000/api/v1/craftable-items/')
+        .then( res => res.json() )
+        .then( data => this.craftableItems = data.data )
+        .catch( error => console.log(error.message) )
     }
   },
   

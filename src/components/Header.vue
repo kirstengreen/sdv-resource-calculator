@@ -3,11 +3,9 @@
     <div class="header-content">
       <router-link to="/"><h3>Stardew Valley Resource Tool</h3></router-link>
       <nav>
-        <ul>
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/resource-calculator">Calculator</router-link></li>
-          <!-- <li><router-link to="/about">About</router-link></li> -->
-        </ul>
+        <router-link :to="{ name:'Home' }">Home</router-link>
+        <router-link :to="{ name:'ResourceCalculator' }">Calculator</router-link>
+        <!-- <router-link to="/about">About</router-link> -->
       </nav>
     </div>
   </header>
@@ -39,12 +37,6 @@ header {
 nav {
   display: flex;
   align-items: center;
-}
-
-nav ul {
-  display: flex;
-  align-items: center;
-  list-style-type:none;
 }
 
 a {
