@@ -25,8 +25,4 @@
   width: 320px;
 }
 
-.form-item:not(:last-child) {
-  margin-right: 16px;
-}
-
 </style>

@@ -60,7 +60,7 @@ body {
 }
 
 .content-footer {
-  margin: 32 auto 48px;
+  margin: 32px auto 48px;
 }
 
 hr {
@@ -91,11 +91,30 @@ input {
   border-radius: 4px;
   font-size: 16px;
   font-weight: 700;
-  color: rgb( 255, 255, 255 )
+  color: rgb( 255, 255, 255 );
 }
 
 .btn:hover {
   opacity: .8;
+}
+
+
+/* FORM STYLES */
+
+.input-couple {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+label {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.form-item:not(:last-child) {
+  margin-right: 16px;
 }
 
 </style>

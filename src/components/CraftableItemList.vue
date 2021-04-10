@@ -54,9 +54,9 @@ export default {
   width: 120px;
   padding: 16px 8px;
   background: rgb( 255, 255, 255 );
-  border: 2px solid rgb( 187, 187, 187 );
+  border: 2px solid rgb( 221, 221, 221 );
   border-radius: 4px;
-  box-shadow: 2px 2px 3px rgba( 51, 51, 51, .2 );
+  box-shadow: 2px 2px 3px rgba( 51, 51, 51, .3 );
   text-align: center;
   font-weight: 600;
 }

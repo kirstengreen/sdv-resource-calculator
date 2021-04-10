@@ -3,9 +3,9 @@
     <div class="content-header">
       <h1>Resource Calculator</h1>
     </div>
-    <CraftingItemSearch />
+    <CraftableItemSearch />
     <hr>
-    <CraftingItemList 
+    <CraftableItemList 
       :craftableItems="craftableItems" 
     />
     <div class="content-footer"></div>
@@ -15,14 +15,14 @@
 
 <script>
 
-import CraftingItemSearch from '../components/CraftingItemSearch'
-import CraftingItemList from '../components/CraftingItemList'
+import CraftableItemSearch from '../components/CraftableItemSearch'
+import CraftableItemList from '../components/CraftableItemList'
 
 export default {
   
   components: {
-    CraftingItemSearch,
-    CraftingItemList
+    CraftableItemSearch,
+    CraftableItemList
   },
 
   data() {
