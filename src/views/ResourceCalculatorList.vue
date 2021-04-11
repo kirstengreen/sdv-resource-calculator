@@ -3,10 +3,20 @@
     <div class="content-header">
       <h1>Resource Calculator</h1>
     </div>
-    <CraftableItemSearch />
-    <hr>
-    <CraftableItemList 
+    <CraftableItemSearch 
       :craftableItems="craftableItems" 
+      @foundItems="addSearchResults"
+      @resetSearchState="resetSearchState"
+    />
+    <hr>
+    <CraftableItemList v-if="searchState === false"
+      :craftableItems="craftableItems" 
+    />
+    <!-- <div v-else-if="searchState === true && searchResults === null ">
+      <h2>Maching results not found</h2>
+    </div> -->
+    <SearchResultsList v-else-if="searchState === true"
+      :searchResults="searchResults" 
     />
     <div class="content-footer"></div>
   </div>
@@ -17,17 +27,21 @@
 
 import CraftableItemSearch from '../components/CraftableItemSearch'
 import CraftableItemList from '../components/CraftableItemList'
+import SearchResultsList from '../components/SearchResultsList'
 
 export default {
   
   components: {
     CraftableItemSearch,
-    CraftableItemList
+    CraftableItemList,
+    SearchResultsList
   },
 
   data() {
     return {
-      craftableItems: []
+      craftableItems: [],
+      searchState: false,
+      searchResults: []
     }
   },
 
@@ -41,6 +55,15 @@ export default {
         .then( res => res.json() )
         .then( data => this.craftableItems = data.data )
         .catch( error => console.log(error.message) )
+    },
+
+    addSearchResults( searchResults ) {
+      this.searchResults = searchResults
+      this.searchState = !this.search
+    },
+
+    resetSearchState( searchState ) {
+      this.searchState = searchState
     }
   },
   
