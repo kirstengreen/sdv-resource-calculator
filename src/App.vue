@@ -40,6 +40,7 @@ body {
   background-color: rgb( 250, 250, 250 );
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
+  color: rgb( 51, 51, 51 );
 }
 
 .page {
@@ -70,6 +71,12 @@ hr {
   color: rgb( 238, 238, 238 );
 }
 
+
+/* TEXT STYLES */
+
+p {
+  line-height: 1.5em;
+}
 
 /* LINK STYLES */
 

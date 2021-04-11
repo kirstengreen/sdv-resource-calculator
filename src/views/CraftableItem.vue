@@ -8,7 +8,7 @@
     </div>
     <div v-if="craftableItem" class="calculate-item-container">
       <div class="item-info">
-        <img v-bind:src="craftableItem.img">
+        <img v-bind:src="craftableItem.img" v-bind:alt="craftableItem.item">
         <h3>{{ craftableItem.item }}</h3>
         <p>{{ craftableItem.category }}</p>
       </div>
