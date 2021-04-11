@@ -68,7 +68,7 @@ export default {
 <style scoped>
 
 .search-form-content {
-  margin: 24px 0 32px;
+  margin: 0 0 32px;
 }
 
 

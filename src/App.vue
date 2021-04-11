@@ -55,6 +55,13 @@ body {
   min-height: calc(100vh - 144px);
 }
 
+.content-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .content-footer {
   margin: 32px auto 48px;
 }

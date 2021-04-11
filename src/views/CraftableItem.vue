@@ -1,10 +1,10 @@
 <template>
   <div class="main-content">
     <div class="content-header">
-      <h1>Calculate Resources</h1>
-    </div>
-    <div class="actions-bar">
-      <button class='btn' @click="$router.push({ name: 'ResourceCalculator' })" >Back to resource list</button>
+      <div class="actions-bar">
+        <h1>Calculate Resources</h1>
+        <button class='btn' @click="$router.push({ name: 'ResourceCalculator' })" >Back to resource list</button>
+      </div>
     </div>
     <div v-if="craftableItem" class="calculate-item-container">
       <div class="item-info">
@@ -121,7 +121,8 @@ export default {
 }
 
 .actions-bar {
-  margin: 24px 0 32px;
+  width:100%;
+  margin: 0 0 32px;
 }
 
 form {
