@@ -2,13 +2,11 @@
   <div class="crafting-items-content">
     <h2>Crafting items</h2>
     <div class="crafting-items-grid">
-      <div class="crafting-item-container" v-for="item in craftableItems" :key="item.id">
-        <router-link :to="{ name: 'CraftableItem', params: { idOfCraftableItem: item.id } }">
+      <div class="crafting-item-container" v-for="item in craftableItems" :key="item.id" @click="$router.push({ name: 'CraftableItem', params: { idOfCraftableItem: item.id }})">
           <div class="crafting-item">
             <img v-bind:src="item.img">
             <p>{{ item.item }}</p>
           </div>
-        </router-link>
       </div>
     </div>
   </div>
@@ -58,14 +56,22 @@ export default {
   border-radius: 4px;
   box-shadow: 2px 2px 3px rgba( 51, 51, 51, .3 );
   text-align: center;
-  font-weight: 600;
 }
 
 .crafting-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+}
+
+.crafting-item p {
+  font-weight: 600;
+}
+
+.crafting-item-container:hover {
+  cursor: pointer;
+  border: 2px solid rgb( 53, 69, 99 );
+  opacity: .8;
 }
 
 </style>
