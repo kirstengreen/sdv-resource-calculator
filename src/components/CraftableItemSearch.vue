@@ -17,13 +17,15 @@ export default {
 
   emits: [
     'foundItems',
-    'resetSearchState'
+    'resetSearchState',
+    'resultsNotFound'
   ],
   
   data() {
     return {
       keyword: '',
-      searchResults: []
+      searchResults: [],
+      resultsNotFound: false
     }
   },
 
@@ -42,9 +44,14 @@ export default {
         }
       }
 
-      // console.log(this.searchResults)
-      let searchResults = this.searchResults
-      this.$emit('foundItems', searchResults)
+      if ( this.searchResults.length < 1 ) {
+        this.resultsNotFound = true
+        let resultsNotFound = this.resultsNotFound
+        this.$emit('resultsNotFound', resultsNotFound)
+      } else {
+        let searchResults = this.searchResults
+        this.$emit('foundItems', searchResults)
+      }
 
     },
 

@@ -6,13 +6,14 @@
     <CraftableItemSearch 
       :craftableItems="craftableItems" 
       @foundItems="addSearchResults"
+      @resultsNotFound="setResultsNotFound"
       @resetSearchState="resetSearchState"
     />
     <hr>
     <CraftableItemList v-if="searchState === false"
       :craftableItems="craftableItems" 
     />
-    <!-- <div v-else-if="searchState === true && searchResults === null ">
+    <!-- <div v-else-if="resultsNotFound === true && searchState === true">
       <h2>Maching results not found</h2>
     </div> -->
     <SearchResultsList v-else-if="searchState === true"
@@ -41,7 +42,8 @@ export default {
     return {
       craftableItems: [],
       searchState: false,
-      searchResults: []
+      searchResults: [],
+      resultsNotFound: false
     }
   },
 
@@ -59,12 +61,21 @@ export default {
 
     addSearchResults( searchResults ) {
       this.searchResults = searchResults
+      if ( this.resultsNotFound === true ) {
+        this.resultsNotFound = false
+      }
       this.searchState = !this.search
     },
 
     resetSearchState( searchState ) {
       this.searchState = searchState
+    },
+
+    setResultsNotFound( resultsNotFound ) {
+      this.resultsNotFound = resultsNotFound
+      console.log(this.resultsNotFound)
     }
+
   },
   
 }
