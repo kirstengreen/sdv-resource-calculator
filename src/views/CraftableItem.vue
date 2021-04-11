@@ -12,19 +12,29 @@
         <h3>{{ craftableItem.item }}</h3>
         <p>{{ craftableItem.category }}</p>
       </div>
-      <div>
+      <div class="item-calculation">
         <h2>Resources needed to craft</h2>
-        <form>
+        <form onsubmit="event.preventDefault()">
           <div class="input-couple form-item">
-            <label for="multiplier">How many you want to make</label>
-            <input class="multiplier-bar" type="text" for="multiplier" placeholder="Enter number" />
+            <label>How many {{ craftableItem.item }}s?</label>
+            <input class="multiplier-bar" type="number" min="1" placeholder="Enter number" v-model="multiplier" @keyup="multiplyResources"/>
           </div>
-          <button class="btn form-item" type="submit">Calculate</button>
         </form>
-        <p><strong>Amount of {{ craftableItem.item }}(s):</strong> {{ multiplier }}</p>
-        <hr>
-        <div v-for="resource in craftableItem.resources" :key="resource">
-          <p><strong>{{ resource.item }}:</strong> {{ resource.amount }}</p>
+        <div class="calculation-results">
+          <div v-if="resources">
+            <p><strong>{{ craftableItem.item }}s:</strong> {{ multiplier }}</p>
+            <hr>
+            <div v-for="(resource, index) in resources" :key="index">
+              <p><strong>{{ craftableItem.resources[index].item }}:</strong> {{ resources[index] }} </p>
+            </div>
+          </div>
+          <div v-else class="original-calculation">
+            <p><strong>{{ craftableItem.item }}s:</strong> {{ multiplier }}</p>
+            <hr>
+            <div v-for="resource in craftableItem.resources" :key="resource">
+              <p><strong>{{ resource.item }}:</strong> {{ resource.amount }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -48,24 +58,38 @@ export default {
   data() {
     return {
       craftableItem: null,
-      multiplier: 1
+      multiplier: 1,
+      resources: null
     }
   },
 
-  beforeMount(){
+  beforeMount() {
     this.fetchCraftableItem()
   },
 
   methods: {
+
     async fetchCraftableItem() {
       fetch('http://localhost:5000/api/v1/craftable-items/' + this.idOfCraftableItem )
         .then( res => res.json() )
         .then( data => this.craftableItem = data.data )
         .catch( error => console.log(error.message) )
-    }
-  },
+    },
 
+    multiplyResources() {
+      const arry = []
+      for ( let i = 0; i < this.craftableItem.resources.length; i++ ) {
+        let newNumber = 1;
+        newNumber *= this.craftableItem.resources[i].amount * this.multiplier
+        arry.push(newNumber)
+      }
+      this.resources = arry
+    }
+
+  },
+  
 }
+
 
 </script>
 
@@ -105,11 +129,17 @@ form {
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-end;
-  margin: 24px 0 40px;
+  margin: 24px 0 24px;
 }
 
 .multiplier-bar {
   width: 240px;
+}
+
+.calculation-results {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 </style>
