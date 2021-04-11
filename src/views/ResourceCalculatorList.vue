@@ -2,13 +2,13 @@
   <div class="main-content">
     <div class="content-header">
       <h1>Resource Calculator</h1>
+      <CraftableItemSearch 
+        :craftableItems="craftableItems" 
+        @foundItems="addSearchResults"
+        @resultsNotFound="setResultsNotFound"
+        @resetSearchState="resetSearchState"
+      />
     </div>
-    <CraftableItemSearch 
-      :craftableItems="craftableItems" 
-      @foundItems="addSearchResults"
-      @resultsNotFound="setResultsNotFound"
-      @resetSearchState="resetSearchState"
-    />
     <hr>
     <CraftableItemList v-if="searchState === false"
       :craftableItems="craftableItems" 
@@ -85,5 +85,10 @@ export default {
 
 <style scoped>
 
+.resource-search {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
 
 </style>

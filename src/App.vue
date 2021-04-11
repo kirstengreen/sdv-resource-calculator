@@ -30,7 +30,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 /* * {
-    border: 1px solid rgb( 250, 126, 112 );
+  border: 1px solid rgb( 250, 126, 112 );
 } */
 
 
@@ -52,11 +52,7 @@ body {
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
-  min-height: calc(100vh - 112px);
-}
-
-.content-header {
-  margin: 48px auto 32px; 
+  min-height: calc(100vh - 144px);
 }
 
 .content-footer {

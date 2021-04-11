@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="header-content">
-      <router-link to="/"><h3>Stardew Valley Resource Tool</h3></router-link>
+      <router-link to="/"><h3>SDV Resource Tool</h3></router-link>
       <nav>
         <router-link :to="{ name:'Home' }">Home</router-link>
         <router-link :to="{ name:'ResourceCalculator' }">Calculator</router-link>
@@ -16,11 +16,13 @@
 <style scoped>
 
 header {
+  z-index: 10;
   display: flex;
   align-items: center;
   position: sticky; 
   top: 0;
   height: 56px;
+  margin-bottom: 32px;
   background-color: rgb( 53, 69, 99 );
   color: rgb( 255, 255, 255 );
 }
