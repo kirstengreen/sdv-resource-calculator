@@ -93,26 +93,14 @@ a:hover {
 }
 
 
-/* FORM STYLES */
-
-input {
-  height: 36px;
-  margin: 0;
-  padding: 0 16px;
-  font-size: 16px;
-  border: 2px solid rgb( 51, 51, 51 );
-  border-radius: 4px;
-}
-
-
 /* BUTTON STYLES */
 
 .btn {
   height: 40px;
   margin: 0;
   padding: 0 16px;
-  background: rgb( 51, 51, 51 );
-  border: 2px solid rgb( 51, 51, 51 );
+  background: rgb( 53, 69, 99 );
+  border: 2px solid rgb( 53, 69, 99 );
   border-radius: 4px;
   font-size: 16px;
   font-weight: 700;
@@ -125,6 +113,19 @@ input {
 
 
 /* FORM STYLES */
+
+input {
+  height: 36px;
+  margin: 0;
+  padding: 0 16px;
+  font-size: 16px;
+  border: 2px solid #999;
+  border-radius: 4px;
+}
+
+input:focus {
+  border: 2px solid rgb( 53, 69, 99 );
+}
 
 .input-couple {
   display: flex;

@@ -48,7 +48,7 @@ a {
 }
 
 nav a {
-  margin-left: 16px;
+  margin-left: 24px;
   font-size: 16px; 
 }
 
