@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="header-content">
-      <router-link to="/"><h3>SDV Resource Tool</h3></router-link>
+      <h3><router-link :to="{ name:'Home' }">SDV Resource Tool</router-link></h3>
       <nav>
         <router-link :to="{ name:'Home' }">Home</router-link>
         <router-link :to="{ name:'ResourceCalculator' }">Calculator</router-link>
@@ -54,6 +54,7 @@ nav a {
 
 nav a:hover {
   opacity: .8;
+  border: none;
 }
 
 </style>

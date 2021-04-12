@@ -84,12 +84,11 @@ a {
   color: rgb( 53, 69, 99 );
   font-weight: 600;
   text-decoration: none;
-
 }
 
 a:hover {
   opacity: .8;
-  /* border-bottom: 2px solid rgb( 53, 69, 99 ); */
+  border-bottom: 2px solid rgb( 53, 69, 99 );
 }
 
 

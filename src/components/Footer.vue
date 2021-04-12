@@ -33,6 +33,7 @@ a {
 
 a:hover {
   opacity: .8;
+  border: none;
 }
 
 </style>
