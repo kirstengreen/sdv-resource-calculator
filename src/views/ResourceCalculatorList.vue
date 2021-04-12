@@ -53,7 +53,7 @@ export default {
 
   methods: {
     async fetchCraftableItems() {
-      fetch('https://sdv-resource-calculator-api.herokuapp.com/api/v1/craftable-items/')
+      fetch('https://sdv-resource-calculator-api.herokuapp.com/')
         .then( res => res.json() )
         .then( data => this.craftableItems = data.data )
         .catch( error => console.log(error.message) )
