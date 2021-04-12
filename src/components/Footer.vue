@@ -1,7 +1,8 @@
 <template>
   <footer>
     <div class="footer-content">
-      <a href="https://github.com/kirstengreen/sdv-resource-calculator">GitHub</a>
+      <p>&copy; 2021 Kirsten Green</p>
+      <p><a href="https://github.com/kirstengreen/sdv-resource-calculator">GitHub</a></p>
     </div>
   </footer>
 </template>
@@ -20,9 +21,16 @@ footer {
 }
 
 .footer-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: row;
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.footer-content p:not(:last-child) {
+  padding-right: 32px; 
 }
 
 a {
