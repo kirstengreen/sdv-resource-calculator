@@ -30,6 +30,15 @@ import CraftableItemSearch from '../components/CraftableItemSearch'
 import CraftableItemList from '../components/CraftableItemList'
 import SearchResultsList from '../components/SearchResultsList'
 
+let baseURL = ''
+
+if (process.env.NODE_ENV === 'development') {
+  baseURL = 'http://localhost:5000/api/v1/craftable-items/'
+} else {
+  baseURL = 'https://sdv-resource-calculator-api.herokuapp.com/api/v1/craftable-items/'
+}
+
+
 export default {
   
   components: {
@@ -53,7 +62,7 @@ export default {
 
   methods: {
     async fetchCraftableItems() {
-      fetch('http://localhost:5000/api/v1/craftable-items/')
+      fetch(baseURL)
         .then( res => res.json() )
         .then( data => this.craftableItems = data.data )
         .catch( error => console.log(error.message) )

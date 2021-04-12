@@ -49,6 +49,14 @@
 
 <script>
 
+let baseURL = ''
+
+if (process.env.NODE_ENV === 'development') {
+  baseURL = 'http://localhost:5000/api/v1/craftable-items/'
+} else {
+  baseURL = 'https://sdv-resource-calculator-api.herokuapp.com/api/v1/craftable-items/'
+}
+
 export default {
   
   props: {
@@ -70,7 +78,7 @@ export default {
   methods: {
 
     async fetchCraftableItem() {
-      fetch('http://localhost:5000/api/v1/craftable-items/' + this.idOfCraftableItem )
+      fetch(baseURL + this.idOfCraftableItem )
         .then( res => res.json() )
         .then( data => this.craftableItem = data.data )
         .catch( error => console.log(error.message) )
