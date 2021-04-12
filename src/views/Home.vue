@@ -30,7 +30,7 @@
 }
 
 .homepage-content button {
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 </style>
