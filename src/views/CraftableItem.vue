@@ -16,20 +16,20 @@
         <h2>Resources needed to craft</h2>
         <form onsubmit="event.preventDefault()">
           <div class="input-couple form-item">
-            <label>How many {{ craftableItem.item }}s?</label>
+            <label>How many {{ craftableItem.item }}(s)?</label>
             <input class="multiplier-bar" type="number" min="1" placeholder="Enter number" v-model="multiplier" @keyup="multiplyResources"/>
           </div>
         </form>
         <div class="calculation-results">
           <div v-if="resources">
-            <p><strong>{{ craftableItem.item }}s:</strong> {{ multiplier }}</p>
+            <p><strong>{{ craftableItem.item }}:</strong> {{ multiplier }}</p>
             <hr>
             <div v-for="(resource, index) in resources" :key="index">
               <p><strong>{{ craftableItem.resources[index].item }}:</strong> {{ resources[index] }} </p>
             </div>
           </div>
           <div v-else class="original-calculation">
-            <p><strong>{{ craftableItem.item }}s:</strong> {{ multiplier }}</p>
+            <p><strong>{{ craftableItem.item }}:</strong> {{ multiplier }}</p>
             <hr>
             <div v-for="resource in craftableItem.resources" :key="resource">
               <p><strong>{{ resource.item }}:</strong> {{ resource.amount }}</p>
