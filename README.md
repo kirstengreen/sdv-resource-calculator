@@ -1,7 +1,9 @@
 # Stardew Valley Resource Tool
 
 Live site: <https://sdv-resource-calculator.vercel.app/>
+
 Frontend Repo: <https://github.com/kirstengreen/sdv-resource-calculator>
+
 API Repo: <https://github.com/kirstengreen/sdv-resource-calculator-api>
 
 
@@ -72,12 +74,12 @@ For my capstone project at General Assembly (Jan - Apr 2021), we were required t
 
 ## Resources and Credit
 
-# Tutorials that helped me learn Vue.js:
-* Vue 3 for Beginners by The Net Ninja: <https://www.youtube.com/playlist?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1>
-* Vue JS Crash Course 2021 by  Traversy Media: <https://www.youtube.com/watch?v=qZXt1Aom3Cs>
-
-
-# Special thanks to the Stardew Valley Wiki:
+### Special thanks to the Stardew Valley Wiki:
 * <https://stardewvalleywiki.com/Stardew_Valley_Wiki>
 * For the item data and images
 * Without Stardew Valley's dedicated fanbase (and ConcernedApe of course!), obtaining the data I needed for this project would have been much harder
+
+
+### Tutorials that helped me learn Vue.js:
+* Vue 3 for Beginners by The Net Ninja: <https://www.youtube.com/playlist?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1>
+* Vue JS Crash Course 2021 by  Traversy Media: <https://www.youtube.com/watch?v=qZXt1Aom3Cs>
